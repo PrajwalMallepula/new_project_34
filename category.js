@@ -1,0 +1,16 @@
+const mongoose = require("mongoose");
+const category = mongoose.Schema({
+       name:{
+              type:String,
+              required:true
+       },
+       icon:{
+              type:String,
+       },
+       color:{
+              type:String
+       }
+
+})
+const Category = mongoose.model("Category",category)
+module.exports = {Category};
