@@ -14,6 +14,7 @@ app.use(morgan("tiny"));
 const api = process.env.API_URL;
 app.use(`${api}/products`,productRouter);
 app.use(`${api}/category`,categoryRouter);
+app.user(`${api}/user`,userRouter);
 mongoose.connect(process.env.CONNECTION_API).then(()=>{
        console.log("db connected sucesfully");
 })
