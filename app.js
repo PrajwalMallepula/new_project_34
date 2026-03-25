@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const productRouter = require("./products");
 const categoryRouter = require("./categorys");
-const userRouter = require("./users");
+const userRouter = require("../users");
 const port = 5000;
 require('dotenv').config();
 const parser = require("body-parser");
