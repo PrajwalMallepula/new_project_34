@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const {Product} = require("../Models/product");
-const { Category } = require("../Models/category");
+const {Product} = require("./product");
+const { Category } = require("./category");
 router.get("/", async(req,res)=>{
        const productList = await Product.find()
        if(!productList){
