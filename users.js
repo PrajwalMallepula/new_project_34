@@ -14,7 +14,7 @@ router.post("/",async (req,res)=>{
               const newUser = new Usersdata({
                      name:req.body.name,
                      email:req.body.email,
-                     passwordHash:bcrypt.hashSync(req.body.passwordHash,12),
+                     passwordHash:req.body.password,
                      phone:req.body.phone
               })
               const saveduser = await newUser.save();
