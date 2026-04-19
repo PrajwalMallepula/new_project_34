@@ -11,7 +11,7 @@ app.use(cors({
 }));
 
 // ✅ IMPORTANT: preflight
-app.options("*", cors());
+app.use(cors());
 
 const mongoose = require("mongoose");
 const morgan = require("morgan");
